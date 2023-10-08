@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Supply Chain DApp</title>
+    <!-- Include ethers.js library -->
+    <script src="https://cdn.ethers.io/lib/ethers-5.5.4.min.js"></script>
+  </head>
+  <body>
+    <h1>Supply Chain DApp</h1>
+
+    <h2>Issue Supply Chain Certificate</h2>
+    <label for="recipientAddress">Recipient Address:</label>
+    <input type="text" id="recipientAddress" /><br />
+    <label for="certificateDescription">Certificate Description:</label>
+    <input type="text" id="certificateDescription" /><br />
+    <button onclick="issueCertificate()">Issue Certificate</button>
+
+    <h2>View Certificates</h2>
+    <label for="recipientToView">Recipient Address:</label>
+    <input type="text" id="recipientToView" /><br />
+    <button onclick="viewCertificates()">View Certificates</button>
+    <div id="certificateList"></div>
+
+    <script>
+      async function issueCertificate() {
+        const provider = new ethers.providers.Web3Provider(
+          web3.currentProvider
+        );
+        const signer = provider.getSigner();
+        const contractAddress = "YOUR_CONTRACT_ADDRESS"; // Replace with your contract address
+        const contractABI = [
+          /* ... Your contract ABI ... */
+        ];
+
+        const contract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          signer
+        );
+
+        const recipientAddress =
+          document.getElementById("recipientAddress").value;
+        const certificateDescription = document.getElementById(
+          "certificateDescription"
+        ).value;
+
+        try {
+          const tx = await contract.issueCertificate(
+            recipientAddress,
+            certificateDescription
+          );
+          await tx.wait();
+          console.log("Transaction hash:", tx.hash);
+          // Display a success message or perform further actions here
+        } catch (error) {
+          console.error("Error:", error);
+          // Handle errors here
+        }
+      }
+
+      async function viewCertificates() {
+        const provider = new ethers.providers.Web3Provider(
+          web3.currentProvider
+        );
+        const contractAddress = "YOUR_CONTRACT_ADDRESS"; // Replace with your contract address
+        const contractABI = [
+          /* ... Your contract ABI ... */
+        ];
+
+        const contract = new ethers.Contract(
+          contractAddress,
+          contractABI,
+          provider
+        );
+
+        const recipientToView =
+          document.getElementById("recipientToView").value;
+
+        try {
+          const certificates = await contract.certificates(recipientToView);
+          const certificateList = document.getElementById("certificateList");
+          certificateList.innerHTML = "";
+
+          certificates.forEach((certificate) => {
+            certificateList.innerHTML += `<p>${
+              certificate.description
+            } (Issued by: ${certificate.issuer}, Timestamp: ${new Date(
+              certificate.timestamp * 1000
+            )})</p>`;
+          });
+        } catch (error) {
+          console.error("Error:", error);
+          // Handle errors here
+        }
+      }
+    </script>
+  </body>
+</html>

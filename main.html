@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ODOP</title>
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="icon" href="images/logo.png" />
+  </head>
+  <body>
+    <div class="img">
+      <h1 class="animated-text"><span id="typed-name"></span></h1>
+    </div>
+
+    <div class="main">
+      <div class="container">
+        <div class="sub-container" id="head">
+          <h2>Buyer</h2>
+        </div>
+        <div class="sub-container">
+          <p>Login with your user account Username and Password.</p>
+        </div>
+        <div class="btn">
+          <a href="login.html" class="page-transition-link"
+            ><button id="loginBtn" class="loginBtn">Login Now</button></a
+          >
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="sub-container" id="head">
+          <h2>Seller</h2>
+        </div>
+        <div class="sub-container">
+          <p>Login with your Seller ID and password.</p>
+        </div>
+        <div class="btn">
+          <a href="sellerlogin.html" class="page-transition-link"
+            ><button id="loginBtn" class="loginBtn">Login Now</button></a
+          >
+        </div>
+      </div>
+
+      <div class="container">
+        <div class="sub-container" id="head">
+          <h2>Government Admin's</h2>
+        </div>
+        <div class="sub-container">
+          <p>Login with the Government issued ID and password.</p>
+        </div>
+        <div class="btn">
+          <a href="govlogin.html" class="page-transition-link"
+            ><button id="loginBtn" class="loginBtn">Login Now</button></a
+          >
+        </div>
+      </div>
+    </div>
+
+    <script src="js/pageTransition.js"></script>
+    <script src="js/index.js"></script>
+    <script>
+      // Wrap the typing animation code in a DOMContentLoaded event listener
+      document.addEventListener("DOMContentLoaded", function () {
+        // Create a new Typed instance
+        var typed = new Typed(".animated-text #typed-name", {
+          strings: strings,
+          typeSpeed: 80, // Typing speed in milliseconds
+          backSpeed: 50, // Backspacing speed in milliseconds
+          backDelay: 2000, // Delay before starting to backspace
+          startDelay: 1000, // Delay before starting to type
+          loop: true, // Loop the animation infinitely
+        });
+      });
+    </script>
+  </body>
+</html>

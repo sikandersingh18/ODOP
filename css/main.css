@@ -1,0 +1,227 @@
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;700&display=swap");
+
+/* Color Variables */
+:root {
+  --white: #fff;
+  --black: #222;
+  --green: #6cbe02;
+  --grey1: #f0f0f0;
+  --grey2: #e9d7d3;
+}
+
+/* Basic Reset */
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  box-sizing: border-box;
+  font-size: 65%;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.7rem;
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 400;
+  font-style: normal;
+  background: var(--grey1);
+  background-image: url(/images/bg1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+a {
+  text-decoration: none;
+  color: var(--black);
+}
+
+.page-transition-link {
+  transition: var(--green) 5s ease-in-out 1s;
+}
+/* box styling */
+.img {
+  text-align: center;
+  margin: 100px;
+}
+.img h1 {
+  color: var(--white);
+}
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  height: 50vh;
+  border-top-left-radius: 100px;
+  border-top-right-radius: 100px;
+}
+.container {
+  background: transparent;
+  margin: 50px;
+  width: 300px;
+  height: 300px;
+  display: inline-block;
+  justify-content: center;
+  text-align: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  /* border: var(--black) solid 2px; */
+  box-shadow: 0 0 5px #fff, 0 0 10px #aaa, 0 0 25px #999;
+  backdrop-filter: blur(10px);
+}
+
+.sub-container h2 {
+  /* background: var(--black); */
+  color: var(--white);
+  border-bottom: var(--black) solid 2px;
+  border-top-left-radius: 19px;
+  border-top-right-radius: 19px;
+  padding: 15px 0;
+}
+
+.sub-container p {
+  padding: 10px;
+  margin: 30px 10px;
+  color: var(--white);
+}
+.btn {
+  margin-top: 50px;
+}
+.btn a button {
+  border: none;
+  background: var(--green);
+  color: var(--white);
+  padding: 10px 10px;
+  border-radius: 10px;
+  font-size: 100%;
+  box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.25);
+}
+.btn a {
+  color: var(--white);
+}
+
+.btn a button:hover {
+  font-weight: bold;
+  color: var(--black);
+  background: rgb(134, 134, 134);
+  cursor: pointer;
+}
+/* CSS for the typing animation */
+#typing-text {
+  overflow: hidden; /* Hide overflowing text */
+  border-right: 2px solid #333; /* Create a typing cursor effect */
+  white-space: nowrap; /* Prevent text from wrapping */
+  margin: 0;
+  padding: 0;
+}
+
+/* CSS animation for typing effect */
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+/* Apply the typing animation to the h1 element */
+#typing-text::after {
+  content: "|"; /* Typing cursor */
+  animation: typing 1s steps(20) infinite;
+}
+
+/* Define a CSS class for the pop-up animation */
+.container {
+  animation-name: popUpAnimation;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-fill-mode: both;
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* Define the keyframes for the pop-up animation */
+@keyframes popUpAnimation {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Media Query for screens smaller than 768px (e.g., mobile devices) */
+@media (max-width: 768px) {
+  body {
+    font-size: 1.4rem;
+  }
+
+  .main {
+    height: auto;
+    padding: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+
+  .container {
+    width: 100%;
+    height: auto;
+    margin: 10px;
+    border-radius: 0;
+  }
+
+  .sub-container h2 {
+    font-size: 1.5rem;
+    padding: 10px 0;
+  }
+
+  .sub-container p {
+    margin: 10px;
+  }
+
+  .btn a button {
+    padding: 10px;
+    font-size: 90%;
+  }
+}
+
+/* Media Query for screens larger than 768px */
+@media (min-width: 769px) {
+  .main {
+    height: 50vh;
+    padding: 20px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+  }
+
+  .container {
+    width: 300px;
+    height: 300px;
+    margin: 20px;
+    border-radius: 20px;
+  }
+
+  .sub-container h2 {
+    font-size: 2rem;
+    padding: 15px 0;
+  }
+
+  .sub-container p {
+    margin: 30px 10px;
+  }
+
+  .btn a button {
+    padding: 20px;
+    font-size: 100%;
+  }
+}

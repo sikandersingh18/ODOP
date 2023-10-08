@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/logo.png" />
+    <title>ODOP</title>
+  </head>
+  <body>
+    <!-- SIDEBAR -->
+    <section id="sidebar">
+      <a href="#" class="brand">
+        <img src="images/logo.png" alt="ODOPLogo" width="60px" />
+        <span class="text">Admin Portal</span>
+      </a>
+      <ul class="side-menu top">
+        <li class="active">
+          <a href="#dashboard">
+            <i class="bx bxs-dashboard"></i>
+            <span class="text">Dashboard</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-doughnut-chart"></i>
+            <span class="text">Analytics</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bx-plus"></i>
+            <span class="text">Integrated Sellers Profile</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">Susides</span>
+          </a>
+        </li>
+        <li>
+          <a href="#">
+            <i class="bx bxs-group"></i>
+            <span class="text">Community Posts</span>
+          </a>
+        </li>
+      </ul>
+      <ul class="side-menu">
+        <li>
+          <a href="#" id="settings">
+            <i class="bx bxs-cog"></i>
+            <span class="text">Settings</span>
+          </a>
+        </li>
+        <li>
+          <a href="govlogin.html" class="logout">
+            <i class="bx bxs-log-out-circle"></i>
+            <span class="text">Logout</span>
+          </a>
+        </li>
+      </ul>
+    </section>
+    <!-- SIDEBAR -->
+
+    <!-- CONTENT -->
+    <section id="content">
+      <!-- NAVBAR -->
+      <nav>
+        <i class="bx bx-menu"></i>
+        <form action="#">
+          <div class="form-input">
+            <input type="search" placeholder="Search..." />
+            <button type="submit" class="search-btn">
+              <i class="bx bx-search"></i>
+            </button>
+          </div>
+        </form>
+
+        <div class="notification">
+          <a href="#" class="notification">
+            <i class="bx bxs-bell"></i>
+            <span class="num">8</span>
+          </a>
+          <div class="notification-panel">
+            <div class="notification-item">
+              <span class="notification-message"
+                >A meeting is sheduled at 2:00 PM</span
+              >
+              <span class="notification-time">2 hours ago</span>
+            </div>
+            <div class="notification-item">
+              <span class="notification-message"
+                >You got a mail from Customer</span
+              >
+              <span class="notification-time">3 hours ago</span>
+            </div>
+            <div class="notification-item">
+              <span class="notification-message"
+                >You are requested to submit the weekly report by
+                25.09.2023</span
+              >
+              <span class="notification-time">5 hours ago</span>
+            </div>
+          </div>
+        </div>
+
+        <a href="#" class="profile">
+          <img src="images/logo.png" />
+        </a>
+      </nav>
+      <!-- NAVBAR -->
+
+      <!-- MAIN -->
+      <main>
+        <div class="head-title">
+          <div class="left">
+            <h1>Dashboard</h1>
+            <ul class="breadcrumb">
+              <li>
+                <a href="#dashboard">Dashboard</a>
+              </li>
+              <li><i class="bx bx-chevron-right"></i></li>
+              <li>
+                <a class="active" href="#">Home</a>
+              </li>
+            </ul>
+          </div>
+          <!-- <a href="#" class="btn-download">
+            <i class="bx bxs-cloud-download"></i>
+            <span class="text">Download PDF</span>
+          </a> -->
+        </div>
+
+        <ul class="box-info">
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3><span id="orderCounter">53</span></h3>
+              <p>New Order</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3><span id="visitorsCounter">1265</span></h3>
+              <p>Visitors at your Products</p>
+            </span>
+          </li>
+          <li>
+            <i class="bx bxs-calendar-check"></i>
+            <span class="text">
+              <h3>&#8377; <span id="moneyCounter">1256483</span></h3>
+              <p>Total Sales - September</p>
+            </span>
+          </li>
+        </ul>
+        <div class="table-data">
+          <div class="order">
+            <div class="head">
+              <h3>Recent Orders</h3>
+              <i class="bx bx-search"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <table>
+              <thead>
+                <tr>
+                  <th>User</th>
+                  <th>Date Order</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>
+                    <img src="images/hero-1.png" />
+                    <p>Mohamad Salma</p>
+                  </td>
+                  <td>21-02-2023</td>
+                  <td><span class="status completed">Completed</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="images/hero-2.png" />
+                    <p>Kashish</p>
+                  </td>
+                  <td>21-02-2023</td>
+                  <td><span class="status process">Process</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="images/hero-1.png" />
+                    <p>John</p>
+                  </td>
+                  <td>21-02-2023</td>
+                  <td><span class="status process">Process</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="images/hero-1.png" />
+                    <p>Riya</p>
+                  </td>
+                  <td>21-02-2023</td>
+                  <td><span class="status pending">Pending</span></td>
+                </tr>
+                <tr>
+                  <td>
+                    <img src="images/hero-2.png" />
+                    <p>Parth</p>
+                  </td>
+                  <td>21-02-2023</td>
+                  <td><span class="status completed">Completed</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="todo">
+            <div class="head">
+              <h3>Todos</h3>
+              <i class="bx bx-plus"></i>
+              <i class="bx bx-filter"></i>
+            </div>
+            <ul class="todo-list">
+              <li class="completed">
+                <p>Todo List</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="completed">
+                <p>Todo List</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="not-completed">
+                <p>Todo List</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="completed">
+                <p>Todo List</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+              <li class="not-completed">
+                <p>Todo List</p>
+                <i class="bx bx-dots-vertical-rounded"></i>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </main>
+      <!-- MAIN -->
+    </section>
+    <!-- CONTENT -->
+
+    <script src="js/admin.js"></script>
+    <script>
+      // Initialize the new order counter value
+      let orderCounterValue = 53;
+      let visitorCounterValue = 1265;
+      let moneyCount = 1256483;
+
+      // Reference to the HTML element displaying the new order counter
+      const orderCounterElement = document.getElementById("orderCounter");
+      const visitorCounterElement = document.getElementById("visitorsCounter");
+      const moneyCounterElement = document.getElementById("moneyCounter");
+
+      // Set the interval (in milliseconds) for auto-increment (1 second in this case)
+      const interval1 = 5000;
+      const interval2 = 2000;
+      const interval3 = 500;
+
+      // Function to increment the new order counter and update the display
+      function incrementOrderCounter() {
+        orderCounterValue++;
+        orderCounterElement.textContent = orderCounterValue;
+      }
+      function incrementVisitors() {
+        visitorCounterValue += 6;
+        visitorCounterElement.textContent = visitorCounterValue;
+      }
+      function incrementMoney() {
+        moneyCount += 326;
+        moneyCounterElement.textContent = moneyCount;
+      }
+      // Start the auto-increment by calling the function repeatedly
+      const autoIncrementInterval = setInterval(
+        incrementOrderCounter,
+        interval1
+      );
+      const autoIncrementVisitors = setInterval(incrementVisitors, interval3);
+
+      const autoMoneyIncrement = setInterval(incrementMoney, interval2);
+    </script>
+  </body>
+</html>

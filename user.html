@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Boxicons -->
+    <link
+      href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+    <!-- Glide js -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css"
+    />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/logo.png" />
+    <title>ODOP</title>
+  </head>
+  <body>
+    <div class="chatbot-icon" id="chatbot-icon">
+      <img src="images/chatbot.jpg" alt="chatBot-icon" width="50px" />
+    </div>
+
+    <div class="chatbot" id="chatbot">
+      <div class="chat-header">
+        <h3>Chatbot</h3>
+        <button id="close-chatbot"><i class="bx bx-x"></i></button>
+      </div>
+      <div class="chat-body" id="chat-body">
+        <!-- Chat messages will be displayed here -->
+      </div>
+      <div class="chat-input">
+        <input type="text" id="user-input" placeholder="Type your message..." />
+        <button id="send-button">Send</button>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header class="header" id="header">
+      <!-- Navigation -->
+      <div class="top-nav">
+        <div class="container d-flex">
+          <p>One District One Product is our Moto - Jammu & Kashmir</p>
+          <ul class="d-flex">
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+            <li><a href="#footer">Contact</a></li>
+            <li>
+              <select name="language">
+                <option value="en-US">English</option>
+                <option value="">Hindi</option>
+                <option value="">Spanish</option>
+                <option value="">French</option>
+                <option value="">German</option>
+                <option value="">Portuguese</option>
+                <option value="">Dutch</option>
+                <option value="">Swedish</option>
+                <option value="">Norwegian</option>
+                <option value="">Danish</option>
+                <option value="">Finnish</option>
+                <option value="">Russian</option>
+                <option value="">Polish</option>
+                <option value="">Czech</option>
+                <option value="">Hungarian</option>
+                <option value="">Greek</option>
+                <option value="">Turkish</option>
+                <option value="">Arabic</option>
+                <option value="">Hebrew</option>
+                <option value="">Bengali</option>
+                <option value="">Chinese (Mandarin)</option>
+                <option value="">Japanese</option>
+                <option value="">Korean</option>
+                <option value="">Vietnamese</option>
+                <option value="">Thai</option>
+                <option value="">Indonesian</option>
+                <option value="">Malay</option>
+                <option value="">Swahili</option>
+                <option value="">Afrikaans</option>
+                <option value="">Tagalog</option>
+                <option value="">Persian (Farsi)</option>
+              </select>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="navigation">
+        <div class="nav-center container d-flex">
+          <a href="index.html" class="logo"><h1>ODOP</h1></a>
+
+          <ul class="nav-list d-flex">
+            <li class="nav-item">
+              <a href="index.html" class="nav-link">Home</a>
+            </li>
+            <li class="nav-item">
+              <a href="shop.html" class="nav-link">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a href="#Categories" class="nav-link">Categories</a>
+            </li>
+            <li class="nav-item">
+              <a href="shop.html" class="nav-link">District Specials</a>
+            </li>
+            <li class="nav-item">
+              <a href="verify.html" class="nav-link">Verify your Product</a>
+            </li>
+            <li class="icons d-flex">
+              <a href="login.html" class="icon">
+                <i class="bx bx-user"></i>
+              </a>
+              <div class="icon">
+                <i class="bx bx-search"></i>
+              </div>
+              <div class="icon">
+                <i class="bx bx-heart" id="heart"></i>
+                <span class="d-flex">0</span>
+              </div>
+
+              <a href="cart.html" class="icon">
+                <i class="bx bx-cart"></i>
+                <span class="d-flex">0</span>
+              </a>
+            </li>
+          </ul>
+
+          <div class="icons d-flex">
+            <a href="login.html" class="icon">
+              <i class="bx bx-user"></i>
+            </a>
+            <div class="icon">
+              <i class="bx bx-search"></i>
+            </div>
+            <div class="icon">
+              <i class="bx bx-heart"></i>
+              <span class="d-flex">0</span>
+            </div>
+            <a href="cart.html" class="icon">
+              <i class="bx bx-cart"></i>
+              <span class="d-flex">0</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="main-conatiner">
+      <div class="container">
+        <div class="sub-container">
+          <ul>
+            <li>Name: <span></span></li>
+            <li>Email ID: <span></span></li>
+            <li>Mobile Number: <span></span></li>
+          </ul>
+        </div>
+
+        <div class="sub-container">
+          <div class="sub-sub-container">
+            <i class="bx-heart"></i>
+            <h2>Cashback Points</h2>
+            <p>&#8377; <span id="points">256</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/glide.min.js"></script>
+    <script src="js/slider.js"></script>
+    <script src="js/index.js"></script>
+    <script src="js/admin.js"></script>
+    <script src="js/whislist.js"></script>
+    <script>
+      const pointsCounterElement = document.getElementById("points");
+      const pointsCounter = 256;
+      const interval = 200;
+      function incrementPoints() {
+        while (pointsCounter <= 300) {
+          pointsCounter += 22;
+          pointsCounterElement.textContent = pointsCounter;
+        }
+      }
+      const autoIncrementPoints = setInterval(incrementPoints, interval);
+    </script>
+  </body>
+</html>

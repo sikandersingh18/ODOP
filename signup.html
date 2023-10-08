@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/logo.png" />
+    <style>
+      body{
+        background-image: url(images/bg1.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <title>Login-ODOP</title>
+  </head>
+  <body>
+   <!-- Navigation -->
+    <div class="top-nav">
+      <div class="container d-flex">
+        <p>One District One Product is our Moto - Jammu & Kashmir</p>
+        <ul class="d-flex">
+          <li><a href="about.html" class="page-transition-link">About Us</a></li>
+          <li><a href="faq.html" class="page-transition-link">FAQ</a></li>
+          <li><a href="#footer">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+    <!--
+    <div class="navigation">
+      <div class="nav-center container d-flex">
+        <a href="index.html" class="logo"><h1>ODOP</h1></a>
+
+        <ul class="nav-list d-flex">
+          <li class="nav-item">
+            <a href="/" class="nav-link">Home</a>
+          </li>
+          <li class="nav-item">
+            <a href="product.html" class="nav-link">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a href="#terms" class="nav-link">Categories</a>
+          </li>
+          <li class="nav-item">
+            <a href="#about" class="nav-link">District Specials</a>
+          </li>
+          <li class="nav-item">
+            <a href="#contact" class="nav-link">About Us</a>
+          </li>
+          <li class="icons d-flex">
+            <a href="login.html" class="icon">
+              <i class="bx bx-user"></i>
+            </a>
+            <div class="icon">
+              <i class="bx bx-search"></i>
+            </div>
+            <div class="icon">
+              <i class="bx bx-heart"></i>
+              <span class="d-flex">0</span>
+            </div>
+            <a href="cart.html" class="icon">
+              <i class="bx bx-cart"></i>
+              <span class="d-flex">0</span>
+            </a>
+          </li>
+        </ul>
+
+        <div class="icons d-flex">
+          <a href="login.html" class="icon">
+            <i class="bx bx-user"></i>
+          </a>
+          <div class="icon">
+            <i class="bx bx-search"></i>
+          </div>
+          <div class="icon">
+            <i class="bx bx-heart"></i>
+            <span class="d-flex">0</span>
+          </div>
+          <a href="cart.html" class="icon">
+            <i class="bx bx-cart"></i>
+            <span class="d-flex">0</span>
+          </a>
+        </div>
+
+        <div class="hamburger">
+          <i class="bx bx-menu-alt-left"></i>
+        </div>
+      </div>
+    </div> -->
+    <!-- Login -->
+    <div class="center-container">
+      <div class="login-container">
+        <div class="login-form">
+          <form action="">
+
+            <h1>Sign Up</h1>
+
+            <div class="input-box">
+              <input type="text" placeholder="Name">
+            </div>
+
+            <div class="input-box">
+              <input type="phone-no" placeholder="Mobile Number" required>
+            </div>
+
+            <div class="input-box">
+              <input type="email" placeholder="Username" required>
+              <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+              <input type="password" placeholder="Password" required>
+              <i class="bx bxs-lock-alt"></i>
+            </div>
+            
+            <a href="login.html" class="page-transition-link">
+              <input type="button" class="signupbtn" value="Sign Up" onclick="signUpPopUp()"></input>
+            </a>
+
+            <div class="sign-up" class="page-transition-link">
+              <p>
+                Already have an account?
+                <a href="login.html" class="page-transition-link">Login In</a>
+              </p>
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col d-flex">
+          <h4>INFORMATION</h4>
+          <a href="">About us</a>
+          <a href="">Contact Us</a>
+          <a href="">Term & Conditions</a>
+          <a href="">Shipping Guide</a>
+        </div>
+        <div class="col d-flex">
+          <h4>USEFUL LINK</h4>
+          <a href="">Online Store</a>
+          <a href="">Customer Services</a>
+          <a href="">Promotion</a>
+          <a href="">Top Brands</a>
+        </div>
+        <div class="col d-flex">
+          <span><i class="bx bxl-facebook-square"></i></span>
+          <span><i class="bx bxl-instagram-alt"></i></span>
+          <span><i class="bx bxl-twitter"></i></span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="js/index.js"></script>
+    <script src="js/pageTransition.js"></script>
+    <script>
+      function signUpPopUp() {
+        alert("You are Successfully Registered. Kindly Login.");
+      }
+    </script>
+    
+  </body>
+</html>

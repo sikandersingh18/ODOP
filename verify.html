@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      
+        <!-- Boxicons -->
+        <link
+          href="https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css"
+          rel="stylesheet"
+        />
+        <!-- Glide js -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.core.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Glide.js/3.4.1/css/glide.theme.css">
+        <!-- Custom StyleSheet -->
+        <link rel="stylesheet" href="css/styles.css" />
+        <link rel="icon" href="images/logo.png" />
+        <style>
+          body{
+            background-image: url(images/bg2.jpg);
+            background-position: center;
+            background-size: cover;
+          }
+        </style>
+        <title>ODOP</title>
+      </head>
+      <body>
+        <!-- Header -->
+        <header class="header" id="header">
+         <!-- Navigation -->
+        <div class="top-nav">
+          <div class="container d-flex">
+            <p>One District One Product is our Moto - Jammu & Kashmir</p>
+            <ul class="d-flex">
+              <li><a href="about.html">About Us</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+              <li><a href="#footer">Contact</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="center-container">
+          <div class="login-container">
+            <div class="login-form">
+              <form action="">
+    
+                <h1>Track Your Order</h1>
+                <div class="input-box">
+                  <input type="email" placeholder="Enter your tracking id" required>
+                </div>
+                  <a><input type="button" class="signupbtn" value="Submit" onclick="submitID()"></input></a>
+
+              </form>
+            </div>
+          </div>
+        </div>
+
+        <script>
+          function submitID() {
+            // // Get the tracking ID from the input field
+            // const trackingId = document.getElementById("trackingId").value;
+        
+            // Create an img element
+            const imgElement = document.createElement("img");
+        
+            // Set the src attribute to the desired image URL
+            imgElement.src = "/images/verify.jpg";
+        
+            // Append the img element to the result container
+            const resultContainer = document.querySelector(".login-container");
+            resultContainer.innerHTML = ""
+            resultContainer.appendChild(imgElement);
+          }
+        </script>
+        
+</body>
+</html>

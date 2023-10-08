@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Box icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/boxicons@latest/css/boxicons.min.css"
+    />
+    <!-- Custom StyleSheet -->
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" href="images/logo.png" />
+    <style>
+      body{
+        background-image: url(images/bg1.jpg);
+        background-position: center;
+        background-size: cover;
+      }
+    </style>
+    <title>Login-ODOP</title>
+  </head>
+  <body>
+
+    <!-- Navigation -->
+    <div class="top-nav">
+      <div class="container d-flex">
+        <p>One District One Product is our Moto - Jammu & Kashmir</p>
+        <ul class="d-flex">
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="#footer">Contact</a></li>
+          <li><select name="language">
+            <option value="en-US">English</option>
+            <option value="">Hindi</option>
+            <option value="">Spanish</option>
+            <option value="">French</option>
+            <option value="">German</option>
+            <option value="">Portuguese</option>
+            <option value="">Dutch</option>
+            <option value="">Swedish</option>
+            <option value="">Norwegian</option>
+            <option value="">Danish</option>
+            <option value="">Finnish</option>
+            <option value="">Russian</option>
+            <option value="">Polish</option>
+            <option value="">Czech</option>
+            <option value="">Hungarian</option>
+            <option value="">Greek</option>
+            <option value="">Turkish</option>
+            <option value="">Arabic</option>
+            <option value="">Hebrew</option>
+            <option value="">Bengali</option>
+            <option value="">Chinese (Mandarin)</option>
+            <option value="">Japanese</option>
+            <option value="">Korean</option>
+            <option value="">Vietnamese</option>
+            <option value="">Thai</option>
+            <option value="">Indonesian</option>
+            <option value="">Malay</option>
+            <option value="">Swahili</option>
+            <option value="">Afrikaans</option>
+            <option value="">Tagalog</option>
+            <option value="">Persian (Farsi)</option>
+          </select></li>
+        </ul>
+      </div>
+    </div>
+    <!-- Login -->
+    <div class="center-container">
+      <div class="login-container">
+        <div class="login-form">
+          <form action="">
+
+            <h1>User Login</h1>
+            <div class="input-box">
+              <input type="email" placeholder="Username" id="emailInput" required>
+              <i class="bx bxs-user"></i>
+            </div>
+
+            <div class="input-box">
+              <input type="password" placeholder="Password" id="passwordInput" required>
+              <i class="bx bxs-lock-alt"></i>
+            </div>
+
+            <div class="remember-forgot">
+              <label><input type="checkbox"> Remember me</label>
+              <label><a href="#">Forgot Password?</a></label>
+            </div>
+            <a>
+              <input type="button" class="signupbtn" id="validateButton" value="Login"></input>
+            </a>
+
+            <div class="sign-up">
+              <p>
+                Don't have an account?
+                <a href="signup.html">Sign Up</a>
+              </p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="row">
+        <div class="col d-flex">
+          <h4>INFORMATION</h4>
+          <a href="">About us</a>
+          <a href="">Contact Us</a>
+          <a href="">Term & Conditions</a>
+          <a href="">Shipping Guide</a>
+        </div>
+        <div class="col d-flex">
+          <h4>USEFUL LINK</h4>
+          <a href="">Online Store</a>
+          <a href="">Customer Services</a>
+          <a href="">Promotion</a>
+          <a href="">Top Brands</a>
+        </div>
+        <div class="col d-flex">
+          <span><i class="bx bxl-facebook-square"></i></span>
+          <span><i class="bx bxl-instagram-alt"></i></span>
+          <span><i class="bx bxl-github"></i></span>
+          <span><i class="bx bxl-twitter"></i></span>
+          <span><i class="bx bxl-pinterest"></i></span>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Custom Script -->
+    <script src="js/index.js"></script>
+    <script>
+      // Get the input elements and the result element
+      const emailInput = document.getElementById('emailInput');
+      const passwordInput = document.getElementById('passwordInput');
+      const validateButton = document.getElementById('validateButton');
+      const result = document.getElementById('result');
+
+      // Function to validate an email address
+      function validateEmail(email) {
+        const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,4}$/;
+        return emailRegex.test(email);
+      }
+
+      // Function to validate a password (for example, requiring a minimum length of 6 characters)
+      function validatePassword(password) {
+        return password.length >= 6;
+      }
+
+      // Event listener for the validation button
+      validateButton.addEventListener('click', () => {
+        const enteredEmail = emailInput.value;
+        const enteredPassword = passwordInput.value;
+        if (validateEmail(enteredEmail) && validatePassword(enteredPassword)) {
+        // Redirect to the next page (replace 'next-page.html' with your actual page URL)
+          window.location.href = 'index.html';
+        } else {
+            alert("Invalid Email or Password!")
+          }
+      });
+    </script>
+  </body>
+</html>
